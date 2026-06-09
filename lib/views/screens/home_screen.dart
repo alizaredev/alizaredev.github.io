@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/views/screens/skills_screen.dart';
 
 import 'about_me_screen.dart';
 
@@ -110,6 +111,11 @@ class HomeScreen extends StatelessWidget {
               key: aboutKey,
               child: const AboutMeScreen(),
             ),
+            Container(
+              key: skillsKey,
+              color: Color(0xff12140b),
+              child: SkillsScreen(),
+            ),
           ],
         ),
       ),
@@ -210,6 +216,7 @@ class AppBarMenu extends StatelessWidget {
         }
         else {
         return Row(
+          spacing: 8.0,
           children: [
             TextButton(
               style: TextButton.styleFrom(

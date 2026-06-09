@@ -32,11 +32,11 @@ class AboutMeScreen extends StatelessWidget {
                         ),
                         children: [
                           TextSpan(
-                            text: "Hello I'am ",
+                            text: "Hello I’am ",
                             style: GoogleFonts.sora(),
                           ),
                           TextSpan(
-                            text: "Ali Asghar Zare\n",
+                            text: "Ali Asghar Zare.\n",
                             style: GoogleFonts.sora(
                               fontWeight: FontWeight.w800,
                             ),
@@ -87,35 +87,35 @@ class AboutMeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text.rich(
-                      TextSpan(
-                        style: GoogleFonts.sora(
-                          fontSize: 28,
-                          letterSpacing: -0.02 * 28,
+                        TextSpan(
+                          style: GoogleFonts.sora(
+                            fontSize: 48,
+                            letterSpacing: -0.02 * 48,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: "Hello I’am ",
+                              style: GoogleFonts.sora(),
+                            ),
+                            TextSpan(
+                              text: "Ali Asghar Zare.\n",
+                              style: GoogleFonts.sora(
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            TextSpan(
+                              text: "Flutter ",
+                              style: GoogleFonts.sora(
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            TextSpan(
+                              text: "Developer.",
+                              style: GoogleFonts.sora(),
+                            ),
+                          ],
                         ),
-                        children: [
-                          TextSpan(
-                            text: "Hello I'am ",
-                            style: GoogleFonts.sora(),
-                          ),
-                          TextSpan(
-                            text: "Ali Asghar Zare\n",
-                            style: GoogleFonts.sora(
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "Flutter ",
-                            style: GoogleFonts.sora(
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "Developer.",
-                            style: GoogleFonts.sora(),
-                          ),
-                        ],
                       ),
-                    ),
                       const SizedBox(height: 20),
                       Text(
                         aboutMe,
