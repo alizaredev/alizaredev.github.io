@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/views/screens/skills_screen.dart';
 
 import 'about_me_screen.dart';
+import 'contact_me_screen.dart';
 import 'projects_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -120,6 +121,11 @@ class HomeScreen extends StatelessWidget {
             Container(
               key: projectKey,
               child: ProjectsScreen(),
+            ),
+            Container(
+              key: contactKey,
+              color: Color(0xff12140b),
+              child: const ContactMeScreen(),
             ),
           ],
         ),
