@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutMeScreen extends StatelessWidget {
@@ -16,8 +15,8 @@ class AboutMeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
             child: Column(
               children: [
-                SvgPicture.asset(
-                  'assets/images/person_vector.svg',
+                Image.asset(
+                  'assets/images/person_vector.png',
                   height: 400,
                 ),
                 SizedBox(height: 30),
@@ -77,8 +76,8 @@ class AboutMeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Flexible(
-                  child: SvgPicture.asset(
-                    'images/person_vector.svg',
+                  child: Image.asset(
+                    'assets/images/person_vector.png',
                     height: 460,
                   ),
                 ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -9,7 +8,7 @@ import '../../models/project.dart';
 class ProjectsScreen extends StatelessWidget {
   ProjectsScreen({super.key});
   final List<Project> projects = [
-    Project(title: "Clinic App", description: "A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.", image: "assets/images/clinic_app_cover.svg", link: "https://github.com/alizaredev/clinic_app"),
+    Project(title: "Clinic App", description: "A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.", image: "assets/images/clinic_app_cover.png", link: "https://github.com/alizaredev/clinic_app"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -124,7 +123,7 @@ class ProjectImage extends StatelessWidget {
         if (constraints.maxWidth < 600) {
           return ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: SvgPicture.asset(
+            child: Image.asset(
               image,
               fit: BoxFit.cover,
             ),
@@ -141,10 +140,10 @@ class ProjectImage extends StatelessWidget {
                 alignment: AlignmentDirectional.center,
                 children: [
                   const CircularProgressIndicator(),
-                  SvgPicture.asset(
+                  Image.asset(
                     image,
                     fit: BoxFit.cover,
-                    placeholderBuilder: (context) => const SizedBox.shrink(),
+                    errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
                   ),
                 ],
               ),
