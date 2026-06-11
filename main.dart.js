@@ -89875,13 +89875,13 @@ return A.I($async$ws,r)}}
 A.K6.prototype={
 N(a){return A.lA(new A.a1X(this))}}
 A.a1X.prototype={
-$2(a,b){var s,r,q,p="images/person_vector.svg",o=null,n="Hello I\u2019am ",m="Ali Asghar Zare.\n",l="Flutter ",k="Developer.",j=4285624698,i="Flutter Developer with experience in designing and implementing cross-platform applications (mobile, desktop, and web) and creating beautiful, user-friendly interfaces. Proficient in writing clean, scalable code and passionate about solving complex problems with creative and efficient solutions. Always eager to learn new technologies and contribute to challenging projects that deliver impactful user experiences.",h=t.VO,g=t.p
-if(b.b<600){s=A.alk(p,B.mx,400,o)
-r=A.d0(o,30,o)
+$2(a,b){var s,r,q,p=null,o="Hello I\u2019am ",n="Ali Asghar Zare.\n",m="Flutter ",l="Developer.",k=4285624698,j="Flutter Developer with experience in designing and implementing cross-platform applications (mobile, desktop, and web) and creating beautiful, user-friendly interfaces. Proficient in writing clean, scalable code and passionate about solving complex problems with creative and efficient solutions. Always eager to learn new technologies and contribute to challenging projects that deliver impactful user experiences.",i=t.VO,h=t.p
+if(b.b<600){s=A.alk("assets/images/person_vector.svg",B.mx,400,p)
+r=A.d0(p,30,p)
 q=A.cc().$2$fontSize$letterSpacing(28,-0.56)
-return new A.cH(B.h1,A.ee(A.b([s,r,A.ee(A.b([A.aBv(A.cw(A.b([A.cw(o,o,o,o,o,o,o,o,o,A.cc().$0(),n),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$1$fontWeight(B.cO),m),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$1$fontWeight(B.cO),l),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$0(),k)],h),o,o,o,o,o,o,o,o,q,o),o,o),B.d4,A.bO(i,o,o,o,!0,A.cc().$2$color$fontSize(A.ax(j),16),o,o)],g),B.aM,B.a5,B.a_,0)],g),B.aa,B.a5,B.a_,0),o)}else{s=A.alk(p,B.mx,460,o)
+return new A.cH(B.h1,A.ee(A.b([s,r,A.ee(A.b([A.aBv(A.cw(A.b([A.cw(p,p,p,p,p,p,p,p,p,A.cc().$0(),o),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$1$fontWeight(B.cO),n),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$1$fontWeight(B.cO),m),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$0(),l)],i),p,p,p,p,p,p,p,p,q,p),p,p),B.d4,A.bO(j,p,p,p,!0,A.cc().$2$color$fontSize(A.ax(k),16),p,p)],h),B.aM,B.a5,B.a_,0)],h),B.aa,B.a5,B.a_,0),p)}else{s=A.alk("images/person_vector.svg",B.mx,460,p)
 r=A.cc().$2$fontSize$letterSpacing(48,-0.96)
-return new A.cH(B.h2,A.rq(A.b([new A.hy(1,B.c2,s,o),new A.hy(1,B.c2,A.ee(A.b([A.aBv(A.cw(A.b([A.cw(o,o,o,o,o,o,o,o,o,A.cc().$0(),n),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$1$fontWeight(B.cO),m),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$1$fontWeight(B.cO),l),A.cw(o,o,o,o,o,o,o,o,o,A.cc().$0(),k)],h),o,o,o,o,o,o,o,o,r,o),o,o),B.d4,A.bO(i,o,o,o,!0,A.cc().$2$color$fontSize(A.ax(j),16),o,o)],g),B.aM,B.a5,B.a_,0),o)],g),B.aM,B.uC,B.a_,0),o)}},
+return new A.cH(B.h2,A.rq(A.b([new A.hy(1,B.c2,s,p),new A.hy(1,B.c2,A.ee(A.b([A.aBv(A.cw(A.b([A.cw(p,p,p,p,p,p,p,p,p,A.cc().$0(),o),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$1$fontWeight(B.cO),n),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$1$fontWeight(B.cO),m),A.cw(p,p,p,p,p,p,p,p,p,A.cc().$0(),l)],i),p,p,p,p,p,p,p,p,r,p),p,p),B.d4,A.bO(j,p,p,p,!0,A.cc().$2$color$fontSize(A.ax(k),16),p,p)],h),B.aM,B.a5,B.a_,0),p)],h),B.aM,B.uC,B.a_,0),p)}},
 $S:79}
 A.LA.prototype={
 N(a){return A.lA(new A.a4A())}}
@@ -89957,7 +89957,7 @@ return A.I($async$$0,r)},
 $S:10}
 A.uW.prototype={
 N(a){var s=this,r=4294702829,q=null,p=4279374859,o=A.ax(r),n=A.ax(r),m=A.lA(new A.aa4(s)),l=s.c,k=s.d,j=s.e,i=s.f,h=t.p,g=A.ee(A.b([A.iZ(q,A.d0(A.n1(A.bO("Ali Asghar Zare",q,q,q,q,A.cc().$2$fontSize$fontWeight(20,B.ap),q,q),q,q),100,q),B.z,B.l,q,q,q,q,q,q,q,q,q,q),new A.yV(l,k,j,i,q),new A.Mc(q)],h),B.aa,B.a5,B.a_,10)
-return new A.Dd(new A.yU(!1,m,n,new A.XI(q,q,1/0,56),q),new A.Ri(A.ee(A.b([A.iZ(q,B.AU,B.z,q,q,q,q,q,l,q,q,q,q,q),A.iZ(q,new A.DP(q),B.z,A.ax(p),q,q,q,q,k,q,q,q,q,q),A.iZ(q,new A.Ps(A.b([new A.Pr("Clinic App","A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.","images/clinic_app_cover.svg","https://github.com/alizaredev/clinic_app")],t.th),q),B.z,q,q,q,q,q,j,q,q,q,q,q),A.iZ(q,B.Gl,B.z,A.ax(p),q,q,q,q,i,q,q,q,q,q)],h),B.aa,B.a5,B.a_,0),q),new A.Mh(g,q),o,q)}}
+return new A.Dd(new A.yU(!1,m,n,new A.XI(q,q,1/0,56),q),new A.Ri(A.ee(A.b([A.iZ(q,B.AU,B.z,q,q,q,q,q,l,q,q,q,q,q),A.iZ(q,new A.DP(q),B.z,A.ax(p),q,q,q,q,k,q,q,q,q,q),A.iZ(q,new A.Ps(A.b([new A.Pr("Clinic App","A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.","assets/images/clinic_app_cover.svg","https://github.com/alizaredev/clinic_app")],t.th),q),B.z,q,q,q,q,q,j,q,q,q,q,q),A.iZ(q,B.Gl,B.z,A.ax(p),q,q,q,q,i,q,q,q,q,q)],h),B.aa,B.a5,B.a_,0),q),new A.Mh(g,q),o,q)}}
 A.aa4.prototype={
 $2(a,b){var s,r,q,p,o="Ali Asghar Zare",n=null
 if(b.b<600)return A.rq(A.b([A.bO(o,n,n,n,n,A.cc().$2$fontSize$fontWeight(20,B.ap),n,n),new A.RJ(n),A.aQp(new A.aa2(a),n)],t.p),B.aa,B.hA,B.a_,0)
