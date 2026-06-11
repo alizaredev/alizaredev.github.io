@@ -17,7 +17,7 @@ class AboutMeScreen extends StatelessWidget {
             child: Column(
               children: [
                 SvgPicture.asset(
-                  'images/person_vector.svg',
+                  'assets/images/person_vector.svg',
                   height: 400,
                 ),
                 SizedBox(height: 30),
