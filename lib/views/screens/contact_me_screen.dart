@@ -23,7 +23,7 @@ class ContactMeScreen extends StatelessWidget {
                   style: GoogleFonts.sora(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
-                    color: Colors.white
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 32),
@@ -32,7 +32,7 @@ class ContactMeScreen extends StatelessWidget {
                   style: GoogleFonts.sora(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 32),
@@ -40,7 +40,7 @@ class ContactMeScreen extends StatelessWidget {
                   onTap: () async {
                     final Uri emailUri = Uri(
                       scheme: 'mailto',
-                      path: "alizare.flutter@gmail.com",
+                      path: "alizaredev@gmail.com",
                     );
                     if (await canLaunchUrl(emailUri)) {
                       await launchUrl(emailUri);
@@ -49,7 +49,7 @@ class ContactMeScreen extends StatelessWidget {
                     }
                   },
                   child: Text(
-                    "alizare.flutter@gmail.com",
+                    "alizaredev@gmail.com",
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -78,7 +78,7 @@ class ContactMeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           );
@@ -89,12 +89,7 @@ class ContactMeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Flexible(
-                child: SizedBox(
-                  width: 500,
-                  child: const ContactForm(),
-                ),
-              ),
+              Flexible(child: SizedBox(width: 500, child: const ContactForm())),
               Flexible(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -105,7 +100,7 @@ class ContactMeScreen extends StatelessWidget {
                       style: GoogleFonts.sora(
                         fontSize: 48,
                         fontWeight: FontWeight.w700,
-                        color: Colors.white
+                        color: Colors.white,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -114,7 +109,7 @@ class ContactMeScreen extends StatelessWidget {
                       style: GoogleFonts.sora(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        color: Colors.white
+                        color: Colors.white,
                       ),
                     ),
                     SizedBox(height: 40),
@@ -122,7 +117,7 @@ class ContactMeScreen extends StatelessWidget {
                       onTap: () async {
                         final Uri emailUri = Uri(
                           scheme: 'mailto',
-                          path: "alizare.flutter@gmail.com",
+                          path: "alizaredev@gmail.com",
                         );
                         if (await canLaunchUrl(emailUri)) {
                           await launchUrl(emailUri);
@@ -131,11 +126,8 @@ class ContactMeScreen extends StatelessWidget {
                         }
                       },
                       child: Text(
-                        "alizare.flutter@gmail.com",
-                        style: TextStyle(
-                          fontSize: 28,
-                          color: Colors.white
-                        ),
+                        "alizaredev@gmail.com",
+                        style: TextStyle(fontSize: 28, color: Colors.white),
                       ),
                     ),
                     SizedBox(height: 8),
@@ -153,15 +145,12 @@ class ContactMeScreen extends StatelessWidget {
                       },
                       child: Text(
                         "+98 910 112 9759",
-                        style: TextStyle(
-                          fontSize: 28,
-                          color: Colors.white
-                        ),
+                        style: TextStyle(fontSize: 28, color: Colors.white),
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         );
