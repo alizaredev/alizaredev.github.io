@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../controller/contact_controller.dart';
@@ -87,12 +88,24 @@ class _ContactFormState extends State<ContactForm> {
                             }
                           },
                           style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
+                            backgroundColor: const Color(0xFF2A2A2A),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                              vertical: 14,
                             ),
-                            foregroundColor: Color(0xff12140b),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            elevation: 0,
                           ),
-                          child: Text("Get In Touch"),
+                          child: const Text(
+                            'Get In Touch',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                            ),
+                          ),
                         ),
                   Container(
                     decoration: BoxDecoration(
