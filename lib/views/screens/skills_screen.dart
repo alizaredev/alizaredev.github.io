@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../models/skill.dart';
@@ -13,11 +13,12 @@ class SkillsScreen extends StatefulWidget {
 
 class _SkillsScreenState extends State<SkillsScreen> {
   final List<Skill> skills = [
-    Skill(name: "Flutter", icon: FontAwesomeIcons.flutter),
-    Skill(name: "Git", icon: FontAwesomeIcons.git),
-    Skill(name: "Dart", icon: FontAwesomeIcons.dartLang),
-    Skill(name: "GetX", icon: FontAwesomeIcons.diagramProject),
-    Skill(name: "Hive Database", icon: FontAwesomeIcons.database),
+    Skill(name: "Flutter", icon: "assets/icons/flutter.svg"),
+    Skill(name: "Git", icon: "assets/icons/git.svg"),
+    Skill(name: "Dart", icon: "assets/icons/dart.svg"),
+    Skill(name: "GetX", icon: "assets/icons/getx.svg"),
+    Skill(name: "Hive Database", icon: "assets/icons/hivedb.svg"),
+    Skill(name: "BloC", icon: "assets/icons/bloc.svg"),
   ];
 
   @override
@@ -146,11 +147,7 @@ class _SkillContainerState extends State<SkillContainer> {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FaIcon(
-                    widget.skill.icon,
-                    color: isHover ? Color(0xff12140b) : Colors.white,
-                    size: 36,
-                  ),
+                  SvgPicture.asset(widget.skill.icon, width: 36, height: 36),
                   const SizedBox(height: 16),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -170,11 +167,7 @@ class _SkillContainerState extends State<SkillContainer> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FaIcon(
-                  widget.skill.icon,
-                  color: isHover ? Color(0xff12140b) : Colors.white,
-                  size: 40,
-                ),
+                SvgPicture.asset(widget.skill.icon, width: 50, height: 50),
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
