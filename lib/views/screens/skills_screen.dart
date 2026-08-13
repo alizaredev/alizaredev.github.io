@@ -34,7 +34,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
                   style: GoogleFonts.sora(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
-                    color: Colors.white
+                    color: Colors.white,
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -53,13 +53,11 @@ class _SkillsScreenState extends State<SkillsScreen> {
                       itemCount: skills.length,
                       itemBuilder: (BuildContext context, int index) {
                         Skill skill = skills[index];
-                        return  SkillContainer(
-                          skill: skill,
-                        );
+                        return SkillContainer(skill: skill);
                       },
-                    )
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           );
@@ -77,7 +75,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
                     style: GoogleFonts.sora(
                       fontSize: 48,
                       fontWeight: FontWeight.w700,
-                      color: Colors.white
+                      color: Colors.white,
                     ),
                   ),
                   const SizedBox(height: 30),
@@ -96,23 +94,18 @@ class _SkillsScreenState extends State<SkillsScreen> {
                         itemCount: skills.length,
                         itemBuilder: (BuildContext context, int index) {
                           Skill skill = skills[index];
-                          return  SkillContainer(
-                            skill: skill,
-                          );
+                          return SkillContainer(skill: skill);
                         },
-                      )
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             Positioned(
               top: -121.5,
               right: 33,
-              child: Image.asset(
-                "assets/images/cat.png",
-                height: 200,
-              )
+              child: Image.asset("assets/images/cat.png", height: 200),
             ),
           ],
         );
@@ -140,9 +133,11 @@ class _SkillContainerState extends State<SkillContainer> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: isHover ? Color(0xfffbf6ed) : Colors.black,
+          color: isHover ? Color(0xfffbf6ed) : Color(0xff12140b),
           border: Border.all(
-              color: isHover ? Colors.black : Color(0xfffbf6ed), width: 2),
+            color: isHover ? Color(0xff12140b) : Color(0xfffbf6ed),
+            width: 2,
+          ),
           borderRadius: BorderRadius.circular(6),
         ),
         child: LayoutBuilder(
@@ -153,7 +148,7 @@ class _SkillContainerState extends State<SkillContainer> {
                 children: [
                   FaIcon(
                     widget.skill.icon,
-                    color: isHover ? Colors.black : Colors.white,
+                    color: isHover ? Color(0xff12140b) : Colors.white,
                     size: 36,
                   ),
                   const SizedBox(height: 16),
@@ -164,11 +159,11 @@ class _SkillContainerState extends State<SkillContainer> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: isHover ? Colors.black : Colors.white,
+                        color: isHover ? Color(0xff12140b) : Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                  )
+                  ),
                 ],
               );
             }
@@ -176,10 +171,10 @@ class _SkillContainerState extends State<SkillContainer> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FaIcon(
-                    widget.skill.icon,
-                    color: isHover ? Colors.black : Colors.white,
-                    size: 40,
-                  ),
+                  widget.skill.icon,
+                  color: isHover ? Color(0xff12140b) : Colors.white,
+                  size: 40,
+                ),
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -188,11 +183,11 @@ class _SkillContainerState extends State<SkillContainer> {
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: isHover ? Colors.black : Colors.white,
+                      color: isHover ? Color(0xff12140b) : Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                )
+                ),
               ],
             );
           },

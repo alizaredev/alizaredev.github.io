@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color(0xff12140b),
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
           spacing: 10,
           children: [
             Container(
-              color: Colors.black,
+              color: Color(0xff12140b),
               child: SizedBox(
                 height: 100,
                 child: Center(
@@ -121,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+                backgroundColor: Color(0xff12140b),
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(4),
@@ -177,7 +177,7 @@ class AppBarMenu extends StatelessWidget {
           return Column(
             children: [
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     aboutKey.currentContext!,
@@ -188,7 +188,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("A B O U T  M E", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     skillsKey.currentContext!,
@@ -199,7 +199,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("S K I L L I S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     projectKey.currentContext!,
@@ -210,7 +210,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("P R O J E C T S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     contactKey.currentContext!,
@@ -227,7 +227,7 @@ class AppBarMenu extends StatelessWidget {
             spacing: 8.0,
             children: [
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     aboutKey.currentContext!,
@@ -238,7 +238,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("A B O U T   M E", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     skillsKey.currentContext!,
@@ -249,7 +249,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("S K I L L I S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     projectKey.currentContext!,
@@ -260,7 +260,7 @@ class AppBarMenu extends StatelessWidget {
                 child: Text("P R O J E C T S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                style: TextButton.styleFrom(foregroundColor: Color(0xff12140b)),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     contactKey.currentContext!,

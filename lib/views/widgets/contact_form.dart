@@ -74,25 +74,26 @@ class _ContactFormState extends State<ContactForm> {
                 spacing: 24,
                 children: [
                   contactController.isLoading.value
-                  ? CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: () {
-                        if (contactController.formKey.currentState!.validate()) {
-                          contactController.sendEmail(
-                            nameController.text, 
-                            emailController.text, 
-                            messageController.text,
-                          );
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4),
+                      ? CircularProgressIndicator()
+                      : ElevatedButton(
+                          onPressed: () {
+                            if (contactController.formKey.currentState!
+                                .validate()) {
+                              contactController.sendEmail(
+                                nameController.text,
+                                emailController.text,
+                                messageController.text,
+                              );
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            foregroundColor: Color(0xff12140b),
+                          ),
+                          child: Text("Get In Touch"),
                         ),
-                        foregroundColor: Colors.black,
-                      ),
-                      child: Text("Get In Touch"),
-                    ),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4),
@@ -108,13 +109,15 @@ class _ContactFormState extends State<ContactForm> {
                       ),
                     ),
                     child: IconButton.filled(
-                      onPressed: () async{
-                        await launchUrl(Uri.parse("https://instagram.com/alizare.code"));
-                      }, 
+                      onPressed: () async {
+                        await launchUrl(
+                          Uri.parse("https://instagram.com/alizare.code"),
+                        );
+                      },
                       style: IconButton.styleFrom(
-                        backgroundColor: Colors.transparent
+                        backgroundColor: Colors.transparent,
                       ),
-                      icon: FaIcon(FontAwesomeIcons.instagram)
+                      icon: FaIcon(FontAwesomeIcons.instagram),
                     ),
                   ),
                   Container(
@@ -131,11 +134,11 @@ class _ContactFormState extends State<ContactForm> {
                       ),
                     ),
                     child: IconButton.filled(
-                      onPressed: () async{
+                      onPressed: () async {
                         await launchUrl(Uri.parse("https://t.me/alizzar"));
                       },
                       style: IconButton.styleFrom(
-                        backgroundColor: Colors.transparent
+                        backgroundColor: Colors.transparent,
                       ),
                       icon: FaIcon(FontAwesomeIcons.telegram),
                     ),
@@ -144,20 +147,19 @@ class _ContactFormState extends State<ContactForm> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4),
                       gradient: LinearGradient(
-                        colors: [
-                          Color(0xFF004C75),
-                          Color(0xFF006D8E),
-                        ],
+                        colors: [Color(0xFF004C75), Color(0xFF006D8E)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
                     ),
                     child: IconButton.filled(
-                      onPressed: () async{
-                        await launchUrl(Uri.parse("https://www.linkedin.com/in/alizare-code"));
-                      }, 
+                      onPressed: () async {
+                        await launchUrl(
+                          Uri.parse("https://www.linkedin.com/in/alizare-code"),
+                        );
+                      },
                       style: IconButton.styleFrom(
-                        backgroundColor: Colors.transparent
+                        backgroundColor: Colors.transparent,
                       ),
                       icon: FaIcon(FontAwesomeIcons.linkedin),
                     ),
@@ -165,7 +167,7 @@ class _ContactFormState extends State<ContactForm> {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
