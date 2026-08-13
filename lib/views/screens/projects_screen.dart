@@ -8,7 +8,20 @@ import '../../models/project.dart';
 class ProjectsScreen extends StatelessWidget {
   ProjectsScreen({super.key});
   final List<Project> projects = [
-    Project(title: "Clinic App", description: "A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.", image: "assets/images/clinic_app_cover.png", link: "https://github.com/alizaredev/clinic_app"),
+    Project(
+      title: "Clinic App",
+      description:
+          "A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.",
+      image: "assets/images/clinic_app_cover.png",
+      link: "https://github.com/alizaredev/clinic_app",
+    ),
+    Project(
+      title: "Weather App",
+      description:
+          "Flutter weather app; developed with Clean Architecture, BLoC state management, and connection to OpenWeatherMap API, with city search capabilities, real-time weather information, and a responsive user interface with light and dark theme support.",
+      image: "assets/images/weather_app_cover.png",
+      link: "https://github.com/alizaredev/weather_app_with_bloc",
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -19,10 +32,13 @@ class ProjectsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
             child: Column(
               children: [
-                Text("My Projects", style: GoogleFonts.sora(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w700
-                )),
+                Text(
+                  "My Projects",
+                  style: GoogleFonts.sora(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
                 const SizedBox(height: 20),
                 ListView.builder(
                   shrinkWrap: true,
@@ -30,7 +46,10 @@ class ProjectsScreen extends StatelessWidget {
                   itemCount: projects.length,
                   itemBuilder: (context, index) {
                     final Project project = projects[index];
-                    return ProjectCard(project: project, isReversed: index.isEven);
+                    return ProjectCard(
+                      project: project,
+                      isReversed: index.isEven,
+                    );
                   },
                 ),
               ],
@@ -41,10 +60,13 @@ class ProjectsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 80),
             child: Column(
               children: [
-                Text("My Projects", style: GoogleFonts.sora(
-                  fontSize: 48,
-                  fontWeight: FontWeight.w700
-                )),
+                Text(
+                  "My Projects",
+                  style: GoogleFonts.sora(
+                    fontSize: 48,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
                 const SizedBox(height: 20),
                 SizedBox(
                   width: MediaQuery.sizeOf(context).width,
@@ -54,10 +76,13 @@ class ProjectsScreen extends StatelessWidget {
                     itemCount: projects.length,
                     itemBuilder: (context, index) {
                       final Project project = projects[index];
-                      return ProjectCard(project: project, isReversed: index.isEven);
+                      return ProjectCard(
+                        project: project,
+                        isReversed: index.isEven,
+                      );
                     },
                   ),
-                )
+                ),
               ],
             ),
           );
@@ -68,7 +93,11 @@ class ProjectsScreen extends StatelessWidget {
 }
 
 class ProjectCard extends StatelessWidget {
-  const ProjectCard({super.key, required this.project, this.isReversed = false});
+  const ProjectCard({
+    super.key,
+    required this.project,
+    this.isReversed = false,
+  });
   final Project project;
   final bool isReversed;
 
@@ -83,7 +112,11 @@ class ProjectCard extends StatelessWidget {
               children: [
                 ProjectImage(image: project.image),
                 SizedBox(height: 28),
-                ProjectInfo(title: project.title, description: project.description, link: project.link)
+                ProjectInfo(
+                  title: project.title,
+                  description: project.description,
+                  link: project.link,
+                ),
               ],
             ),
           );
@@ -92,17 +125,29 @@ class ProjectCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: isReversed 
-              ? [
-                  Flexible(child: ProjectInfo(title: project.title, description: project.description, link: project.link)),
-                  SizedBox(width: 50),
-                  Flexible(child: ProjectImage(image: project.image)),
-                ] 
-              : [
-                  Flexible(child: ProjectImage(image: project.image)),
-                  SizedBox(width: 50),
-                  Flexible(child: ProjectInfo(title: project.title, description: project.description, link: project.link)),
-                ],
+              children: isReversed
+                  ? [
+                      Flexible(
+                        child: ProjectInfo(
+                          title: project.title,
+                          description: project.description,
+                          link: project.link,
+                        ),
+                      ),
+                      SizedBox(width: 50),
+                      Flexible(child: ProjectImage(image: project.image)),
+                    ]
+                  : [
+                      Flexible(child: ProjectImage(image: project.image)),
+                      SizedBox(width: 50),
+                      Flexible(
+                        child: ProjectInfo(
+                          title: project.title,
+                          description: project.description,
+                          link: project.link,
+                        ),
+                      ),
+                    ],
             ),
           );
         }
@@ -110,7 +155,6 @@ class ProjectCard extends StatelessWidget {
     );
   }
 }
-
 
 class ProjectImage extends StatelessWidget {
   const ProjectImage({super.key, required this.image});
@@ -123,27 +167,29 @@ class ProjectImage extends StatelessWidget {
         if (constraints.maxWidth < 600) {
           return ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Image.asset(
-              image,
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset(image, fit: BoxFit.cover),
           );
         }
         double imageWidth = MediaQuery.sizeOf(context).width * 0.39;
         return SizedBox(
           width: imageWidth,
-          child: AspectRatio(
-            aspectRatio: 16 / 12,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            clipBehavior: Clip.antiAlias,
+            child: AspectRatio(
+              aspectRatio: 16 / 12,
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
                   const CircularProgressIndicator(),
-                  Image.asset(
-                    image,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+
+                  Positioned.fill(
+                    child: Image.asset(
+                      image,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) =>
+                          const SizedBox.shrink(),
+                    ),
                   ),
                 ],
               ),
@@ -174,15 +220,21 @@ class ProjectInfo extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: GoogleFonts.sora(
-                fontSize: 20,
-                fontWeight: FontWeight.w700
-              )),
+              Text(
+                title,
+                style: GoogleFonts.sora(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
               const SizedBox(height: 20),
-              Text(description, style: GoogleFonts.sora(
-                fontSize: 14,
-                fontWeight: FontWeight.w400
-              )),
+              Text(
+                description,
+                style: GoogleFonts.sora(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
               IconButton(
                 onPressed: () async {
                   await launchUrl(Uri.parse(link));
@@ -195,18 +247,24 @@ class ProjectInfo extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: GoogleFonts.sora(
-              fontSize: 32,
-              fontWeight: FontWeight.w600
-            )),
-            Text(description, style: GoogleFonts.sora(
-              fontSize: 16,
-              fontWeight: FontWeight.w400
-            )),
+            Text(
+              title,
+              style: GoogleFonts.sora(
+                fontSize: 32,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Text(
+              description,
+              style: GoogleFonts.sora(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
             IconButton(
               onPressed: () async {
                 await launchUrl(Uri.parse(link));
-              }, 
+              },
               icon: const FaIcon(FontAwesomeIcons.arrowUpRightFromSquare),
             ),
           ],
