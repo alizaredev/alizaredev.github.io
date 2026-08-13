@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/views/screens/skills_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'about_me_screen.dart';
 import 'contact_me_screen.dart';
@@ -43,8 +44,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               );
-            }
-            else {
+            } else {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -62,18 +62,21 @@ class HomeScreen extends StatelessWidget {
                     contactKey: contactKey,
                   ),
                   ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      launchUrl(
+                        Uri.parse(
+                          "https://drive.google.com/file/d/1Eq0LJSJGbXcp0-Uo0_b6uXoyTjAJ1APc/view?usp=sharing",
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4)
-                      )
+                        borderRadius: BorderRadius.circular(4),
+                      ),
                     ),
-                    label: Text(
-                      "Resume",
-                      style: GoogleFonts.sora(),
-                    ),
+                    label: Text("Resume", style: GoogleFonts.sora()),
                     icon: const FaIcon(FontAwesomeIcons.file),
                   ),
                 ],
@@ -92,36 +95,54 @@ class HomeScreen extends StatelessWidget {
                 height: 100,
                 child: Center(
                   child: Text(
-                    "Ali Asghar Zare", 
+                    "M E N U",
                     style: GoogleFonts.sora(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ),
             ),
-            AppBarMenu(aboutKey: aboutKey, skillsKey: skillsKey, projectKey: projectKey, contactKey: contactKey),
+            AppBarMenu(
+              aboutKey: aboutKey,
+              skillsKey: skillsKey,
+              projectKey: projectKey,
+              contactKey: contactKey,
+            ),
             Divider(),
+            ElevatedButton.icon(
+              onPressed: () {
+                launchUrl(
+                  Uri.parse(
+                    "https://drive.google.com/file/d/1Eq0LJSJGbXcp0-Uo0_b6uXoyTjAJ1APc/view?usp=sharing",
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+              ),
+              label: Text("Resume", style: GoogleFonts.sora()),
+              icon: const FaIcon(FontAwesomeIcons.file),
+            ),
           ],
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              key: aboutKey,
-              child: const AboutMeScreen(),
-            ),
+            Container(key: aboutKey, child: const AboutMeScreen()),
             Container(
               key: skillsKey,
               color: Color(0xff12140b),
               child: SkillsScreen(),
             ),
-            Container(
-              key: projectKey,
-              child: ProjectsScreen(),
-            ),
+            Container(key: projectKey, child: ProjectsScreen()),
             Container(
               key: contactKey,
               color: Color(0xff12140b),
@@ -156,9 +177,7 @@ class AppBarMenu extends StatelessWidget {
           return Column(
             children: [
               TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     aboutKey.currentContext!,
@@ -166,18 +185,10 @@ class AppBarMenu extends StatelessWidget {
                     curve: Curves.easeInOut,
                   );
                 },
-                child: Text(
-                  "A B O U T  M E",
-                  style: GoogleFonts.sora(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: Text("A B O U T  M E", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     skillsKey.currentContext!,
@@ -185,15 +196,10 @@ class AppBarMenu extends StatelessWidget {
                     curve: Curves.easeInOut,
                   );
                 },
-                child: Text(
-                  "S K I L L I S",
-                  style: GoogleFonts.sora(),
-                ),
+                child: Text("S K I L L I S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     projectKey.currentContext!,
@@ -201,15 +207,10 @@ class AppBarMenu extends StatelessWidget {
                     curve: Curves.easeInOut,
                   );
                 },
-                child: Text(
-                  "P R O J E C T S",
-                  style: GoogleFonts.sora(),
-                ),
+                child: Text("P R O J E C T S", style: GoogleFonts.sora()),
               ),
               TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
                 onPressed: () {
                   Scrollable.ensureVisible(
                     contactKey.currentContext!,
@@ -217,86 +218,62 @@ class AppBarMenu extends StatelessWidget {
                     curve: Curves.easeInOut,
                   );
                 },
-                child: Text(
-                  "C O N T A C T   M E",
-                  style: GoogleFonts.sora(),
-                ),
+                child: Text("C O N T A C T   M E", style: GoogleFonts.sora()),
+              ),
+            ],
+          );
+        } else {
+          return Row(
+            spacing: 8.0,
+            children: [
+              TextButton(
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                onPressed: () {
+                  Scrollable.ensureVisible(
+                    aboutKey.currentContext!,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text("A B O U T   M E", style: GoogleFonts.sora()),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                onPressed: () {
+                  Scrollable.ensureVisible(
+                    skillsKey.currentContext!,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text("S K I L L I S", style: GoogleFonts.sora()),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                onPressed: () {
+                  Scrollable.ensureVisible(
+                    projectKey.currentContext!,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text("P R O J E C T S", style: GoogleFonts.sora()),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(foregroundColor: Colors.black),
+                onPressed: () {
+                  Scrollable.ensureVisible(
+                    contactKey.currentContext!,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Text("C O N T A C T   M E", style: GoogleFonts.sora()),
               ),
             ],
           );
         }
-        else {
-        return Row(
-          spacing: 8.0,
-          children: [
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Scrollable.ensureVisible(
-                  aboutKey.currentContext!,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut,
-                );
-              },
-              child: Text(
-                "A B O U T   M E",
-                style: GoogleFonts.sora(),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Scrollable.ensureVisible(
-                  skillsKey.currentContext!,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut,
-                );
-              },
-              child: Text(
-                "S K I L L I S",
-                style: GoogleFonts.sora(),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Scrollable.ensureVisible(
-                  projectKey.currentContext!,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut,
-                );
-              },
-              child: Text(
-                "P R O J E C T S",
-                style: GoogleFonts.sora(),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Scrollable.ensureVisible(
-                  contactKey.currentContext!,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut,
-                );
-              },
-              child: Text(
-                "C O N T A C T   M E",
-                style: GoogleFonts.sora(),
-              ),
-            ),
-          ],
-        );
-        }
-      }
+      },
     );
   }
 }
